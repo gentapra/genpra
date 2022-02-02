@@ -1,0 +1,49 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<body>
+<div class="w3-container">
+    <img class="w3 container w3-animate-top" src="top.jpg"style="width:100%;height:40%;"></div>
+</div>
+<div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button" onclick="openfoto('profile')">Profile</button>
+     <button class="w3-bar-item w3-button" onclick="openfoto('Film Horor')">Film Horor</button>
+        <button class="w3-bar-item w3-button" onclick="openfoto('Film Thriller')">Film Thriller</button>
+             <button class="w3-bar-item w3-button" onclick="openfoto('Film Action')">Film Action</button>
+         <button class="w3-bar-item w3-button" onclick="openfoto('Film Comedy')">Film Comedy</button>
+</div>
+<div id="profile" class="w3-container Film" style="display:none">
+    <h2>NIM : 10121059<br>
+        NAMA : GENTA PRAKOSO<br>
+        KELAS : IF2
+    </h2>
+    </div>
+     <div id="Film Horor" class="w3-container Film w3-animate w3-animate-fading" style="display:none">
+        <h2>PENGABDI SETAN</h2>
+        <img src="filmhoror.jpg "style="width:20%;">
+     </div>
+           <div id="Film Thriller" class="w3-container Film w3-animate-bottom" style="display:none">
+ <h2>SCREAM</h2>
+ <img src="filmthriller.jpg" style="width:20%;">
+        </div>
+    <div id="Film Action" class="w3-container Film w3-animate-top" style="display:none">
+       <h2>JOHN WICK</h2>
+          <img src="filmaction.jpg"style="width:20%;">
+    </div>
+      <div id="Film Comedy" class="w3-container Gitar w3-animate-zoom" style="display:none">
+         <h2>JUMANJI</h2>
+       <img src="filmcomedy.jpg"style="width:25%;height:50%;">
+     </div>
+<script>
+function openfoto(namaFilm) {
+ var i;
+ var x = document.getElementsByClassName("film");
+ for (i = 0; i < x.length; i++) {
+ x[i].style.display = "none"; 
+ }
+ document.getElementById(namaFilm).style.display = "block"; 
+}
+</script>
+</body>
+</html>
